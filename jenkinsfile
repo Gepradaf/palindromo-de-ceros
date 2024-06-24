@@ -1,20 +1,15 @@
 pipeline {
-    agent any
-
+    agent {
+        docker {
+            image 'python:3.8'  // Utilizamos la imagen oficial de Python
+            args '-u root'      // Argumentos adicionales si son necesarios
+        }
+    }
     stages {
-        stage('Build') {
+        stage('Verificar palíndromo') {
             steps {
-                echo 'Compilando el código...'  // Aquí podrías agregar comandos de compilación si es necesario
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Ejecutando pruebas...'  // Aquí podrías agregar comandos para ejecutar pruebas
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Desplegando...'  // Aquí podrías agregar comandos para despliegue
+                sh 'pip install pytest'  // Instalamos pytest si es necesario
+                sh 'python palindromo.py' // Ejecutamos el script Python
             }
         }
     }
