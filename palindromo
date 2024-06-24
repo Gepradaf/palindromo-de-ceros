@@ -1,21 +1,8 @@
-pipeline {
-    agent any
+def es_palindromo_de_ceros(cadena):
+    return cadena == cadena[::-1]
 
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Compilando el código...'  // Aquí podrías agregar comandos de compilación si es necesario
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Ejecutando pruebas...'  // Aquí podrías agregar comandos para ejecutar pruebas
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Desplegando...'  // Aquí podrías agregar comandos para despliegue
-            }
-        }
-    }
-}
+cadena = input("Introduce la cadena: ")
+if es_palindromo_de_ceros(cadena):
+    print("Es un palíndromo de ceros.")
+else:
+    print("No es un palíndromo de ceros.")
