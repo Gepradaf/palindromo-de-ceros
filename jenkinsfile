@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Compilando el código...'  // Aquí podrías agregar comandos de compilación si es necesario
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Ejecutando pruebas...'  // Aquí podrías agregar comandos para ejecutar pruebas
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Desplegando...'  // Aquí podrías agregar comandos para despliegue
+            }
+        }
+    }
+}
