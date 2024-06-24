@@ -1,0 +1,8 @@
+def es_palindromo_de_ceros(cadena):
+    return cadena == cadena[::-1]
+
+cadena = input("Introduce la cadena: ")
+if es_palindromo_de_ceros(cadena):
+    print("Es un palíndromo de ceros.")
+else:
+    print("No es un palíndromo de ceros.")
