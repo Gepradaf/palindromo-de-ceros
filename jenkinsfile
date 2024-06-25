@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Compilando el código...'  // Aquí podrías agregar comandos de compilación si es necesario
+                echo 'Compilando el código...'  // Aquí podemos agregar comandos de compilación si se requieren
             }
         }
         stage('Test') {
             steps {
-                echo 'Ejecutando pruebas...'  // Aquí podrías agregar comandos para ejecutar pruebas
+                echo 'Ejecutando pruebas...'  // Aquí podemos agregar comandos para ejecutar pruebas de testing
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Desplegando...'  // Aquí podrías agregar comandos para despliegue
+                echo 'Desplegando...'  // Aquí podemos agregar comandos para despliegue en la app
             }
         }
     }
